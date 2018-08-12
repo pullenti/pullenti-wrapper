@@ -1,0 +1,13 @@
+language: python
+python:
+  - "3.5"
+  - "3.6"
+addons:
+  apt:
+    packages:
+    - graphviz
+script:
+  - sed -i 's/kernelspec//' test.ipynb
+  - pytest --pep8 pullenti_wrapper --nbval-lex --cov pullenti_wrapper --cov-report xml -v docs.ipynb
+after_success:
+  coveralls
