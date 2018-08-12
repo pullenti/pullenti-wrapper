@@ -11,7 +11,7 @@
 
 Минусы:
 - Некоммерческое использование.
-- Медленно работает в Python. Текст одной новости с lenta.ru разбирается ~2 секунды.
+- Медленно работает в Python. Инициализируется ~20 секунд, текст одной новости с lenta.ru разбирается ~2 секунды.
 - Не очень привычный для Python интерфейс. Код получается трансляцией из C#.
 - Очень сложный код. Тяжело понять, что пошло не так есть, если в результате ошибка.
 
@@ -71,7 +71,7 @@ $ pip install pullenti-wrapper
 
 ## Документация
 
-- Документация для обёртки — https://github.com/natasha/pullenti-wrapper/blob/master/docs.ipynb
+- Документация для обёртки — http://nbviewer.jupyter.org/github/natasha/pullenti-wrapper/blob/master/docs.ipynb
 - Документация для PullEnti — http://pullenti.ru/DownloadPage.aspx. На сайте PullEnti также есть демо-стенд http://pullenti.ru/DemoPage.aspx
 
 ## Лицензия
