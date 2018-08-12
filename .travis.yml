@@ -7,7 +7,7 @@ addons:
     packages:
     - graphviz
 script:
-  - sed -i 's/kernelspec//' test.ipynb
+  - sed -i 's/kernelspec//' docs.ipynb
   - pytest --pep8 pullenti_wrapper --nbval-lex --cov pullenti_wrapper --cov-report xml -v docs.ipynb
 after_success:
   coveralls
