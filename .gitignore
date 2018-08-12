@@ -5,3 +5,4 @@
 *.pyc
 __pycache__/
 .DS_Store
+coverage.xml
