@@ -1,6 +1,6 @@
 # pullenti-wrapper [![Build Status](https://travis-ci.org/natasha/pullenti-wrapper.svg?branch=master)](https://travis-ci.org/natasha/pullenti-wrapper) [![Coverage Status](https://coveralls.io/repos/github/natasha/pullenti-wrapper/badge.svg?branch=master)](https://coveralls.io/github/natasha/pullenti-wrapper?branch=master)
 
-PullEnti библиотека для C# для NER на русском языке. В 2016 году заняла первое место на [соревновании factRuEval-2016](https://github.com/dialogue-evaluation/factRuEval-2016). В 2018 автор [портировал код на Java и Python](https://habr.com/post/354942/).
+[PullEnti](http://pullenti.ru/) — библиотека на C# для NER на русском языке. В 2016 году заняла первое место на [соревновании factRuEval-2016](https://github.com/dialogue-evaluation/factRuEval-2016). В 2018 автор [портировал код на Java и Python](https://habr.com/post/354942/).
 
 Плюсы PullEnti:
 - Наверное, лучше качество NER для русского языка. Отличная точность, нормальная полнота. 100% лучшее доступное для Python решение для NER для русского.
