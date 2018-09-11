@@ -116,7 +116,7 @@ INITIALIZED = set()
 
 
 def select_analyzers(selected):
-    for analyzer in ProcessorService._get_analyzers():
+    for analyzer in ProcessorService.get_analyzers():
         if analyzer.name in selected:
             analyzer = analyzer.clone()
             if analyzer is not None:  # TODO why would it happen?

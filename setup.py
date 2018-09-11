@@ -29,6 +29,6 @@ setup(
     keywords='natural language processing, named entity recognition',
     packages=find_packages(),
     install_requires=[
-        'pullenti'
+        'pullenti==3.10'
     ]
 )

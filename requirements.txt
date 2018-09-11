@@ -1,5 +1,5 @@
 # common
-pullenti
+pullenti==3.10
 
 # dev
 ipymarkup

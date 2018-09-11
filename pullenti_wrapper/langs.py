@@ -42,7 +42,7 @@ def raw_to_langs(raw):
 
 
 def loaded_langs():
-    raw = Morphology._get_loaded_languages()
+    raw = Morphology.get_loaded_languages()
     return raw_to_langs(raw)
 
 
