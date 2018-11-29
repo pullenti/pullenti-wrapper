@@ -42,20 +42,20 @@ def raw_to_langs(raw):
 
 
 def loaded_langs():
-    raw = Morphology.get_loaded_languages()
+    raw = Morphology.getLoadedLanguages()
     return raw_to_langs(raw)
 
 
 def unload_langs(langs):
     raw = langs_to_raw(langs)
-    Morphology.unload_languages(raw)
-    Explanatory.unload_languages(raw)
+    Morphology.unloadLanguages(raw)
+    Explanatory.unloadLanguages(raw)
 
 
 def load_langs(langs):
     raw = langs_to_raw(langs)
-    Morphology.load_languages(raw)
-    Explanatory.load_languages(raw)
+    Morphology.loadLanguages(raw)
+    Explanatory.loadLanguages(raw)
 
 
 def set_langs(langs):

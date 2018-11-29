@@ -14,7 +14,7 @@ from pullenti.ner.measure.MeasureAnalyzer import MeasureAnalyzer
 from pullenti.ner.bank.BankAnalyzer import BankAnalyzer
 from pullenti.ner.geo.GeoAnalyzer import GeoAnalyzer
 from pullenti.ner.address.AddressAnalyzer import AddressAnalyzer
-from pullenti.ner._org.OrganizationAnalyzer import OrganizationAnalyzer
+from pullenti.ner.org.OrganizationAnalyzer import OrganizationAnalyzer
 from pullenti.ner.person.PersonAnalyzer import PersonAnalyzer
 from pullenti.ner.mail.MailAnalyzer import MailAnalyzer
 from pullenti.ner.transport.TransportAnalyzer import TransportAnalyzer
@@ -116,7 +116,7 @@ INITIALIZED = set()
 
 
 def select_analyzers(selected):
-    for analyzer in ProcessorService.get_analyzers():
+    for analyzer in ProcessorService.getAnalyzers():
         if analyzer.name in selected:
             analyzer = analyzer.clone()
             if analyzer is not None:  # TODO why would it happen?
@@ -142,7 +142,7 @@ class Processor(Record):
 
         self.raw = RawProcessor()
         for analyzer in select_analyzers(self.analyzers):
-            self.raw.add_analyzer(analyzer)
+            self.raw.addAnalyzer(analyzer)
 
     def __call__(self, text):
         text = preprocess(text)

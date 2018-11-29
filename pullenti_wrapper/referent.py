@@ -3,7 +3,7 @@ from pullenti.ner.Referent import Referent as RawReferent
 from pullenti.ner.person.PersonReferent import PersonReferent as RawPersonReferent
 from pullenti.ner.person.PersonPropertyReferent import PersonPropertyReferent as RawPersonPropertyReferent
 from pullenti.ner.person.PersonIdentityReferent import PersonIdentityReferent as RawPersonIdentityReferent
-from pullenti.ner._org.OrganizationReferent import OrganizationReferent as RawOrganizationReferent
+from pullenti.ner.org.OrganizationReferent import OrganizationReferent as RawOrganizationReferent
 from pullenti.ner.geo.GeoReferent import GeoReferent as RawGeoReferent
 from pullenti.ner.date.DateReferent import DateReferent as RawDateReferent
 from pullenti.ner.date.DateRangeReferent import DateRangeReferent as RawDateRangeReferent
