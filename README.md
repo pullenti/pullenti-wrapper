@@ -1,4 +1,4 @@
-# pullenti-wrapper [![Build Status](https://travis-ci.org/natasha/pullenti-wrapper.svg?branch=master)](https://travis-ci.org/natasha/pullenti-wrapper) [![Coverage Status](https://coveralls.io/repos/github/natasha/pullenti-wrapper/badge.svg?branch=master)](https://coveralls.io/github/natasha/pullenti-wrapper?branch=master)
+# pullenti-wrapper [![Build Status](https://travis-ci.org/pullenti/pullenti-wrapper.svg?branch=master)](https://travis-ci.org/pullenti/pullenti-wrapper)
 
 [PullEnti](http://pullenti.ru/) — библиотека на C# для NER на русском языке. В 2016 году заняла первое место на [соревновании factRuEval-2016](https://github.com/dialogue-evaluation/factRuEval-2016). В 2018 автор [портировал код на Java и Python](https://habr.com/post/354942/).
 

@@ -8,6 +8,4 @@ addons:
     - graphviz
 script:
   - sed -i 's/kernelspec//' docs.ipynb
-  - pytest --pep8 pullenti_wrapper --nbval-lax --cov pullenti_wrapper --cov-report xml -v docs.ipynb
-after_success:
-  coveralls
+  - pytest --pep8 pullenti_wrapper --nbval-lax -v docs.ipynb
