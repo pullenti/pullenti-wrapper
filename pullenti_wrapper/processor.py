@@ -26,10 +26,7 @@ from pullenti.ner.business.BusinessAnalyzer import BusinessAnalyzer
 from pullenti.ner.named.NamedEntityAnalyzer import NamedEntityAnalyzer
 from pullenti.ner.weapon.WeaponAnalyzer import WeaponAnalyzer
 
-from .utils import (
-    assert_one_of,
-    Record
-)
+from .utils import assert_one_of
 from .langs import (
     DEFAULT_LANGS,
     loaded_langs,
@@ -123,9 +120,7 @@ def select_analyzers(selected):
                 yield analyzer
 
 
-class Processor(Record):
-    __attributes__ = ['analyzers']
-
+class Processor(object):
     def __init__(self, analyzers):
         for analyzer in analyzers:
             assert_one_of(analyzer, ANALYZERS)
@@ -149,3 +144,8 @@ class Processor(Record):
         sofa = SourceOfAnalysis(text)
         raw = self.raw.process(sofa)
         return convert_result(text, raw)
+
+    def __repr__(self):
+        return 'Processor([{analyzers}])'.format(
+            analyzers=', '.join(self.analyzers)
+        )

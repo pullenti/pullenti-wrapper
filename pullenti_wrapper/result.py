@@ -1,42 +1,17 @@
 
 from pullenti.ner.ReferentToken import ReferentToken
 
-from .utils import (
-    Record,
-    assert_type
+from pullenti_client.result import (
+    Span,
+    Match,
+    Result as Result_,
 )
-from .referent import (
-    convert_referents,
-    Referent
-)
-from .graph import Graph
+
+from .referent import convert_referents
 
 
-class Span(Record):
-    __attributes__ = ['start', 'stop']
-
-    def __init__(self, start, stop):
-        self.start = start
-        self.stop = stop
-
-
-class Match(Record):
-    __attributes__ = ['referent', 'span', 'children']
-
-    def __init__(self, referent, span, children):
-        assert_type(referent, Referent)
-        self.referent = referent
-        assert_type(span, Span)
-        self.span = span
-        for child in children:
-            assert_type(child, Match)
-        self.children = children
-
-    def walk(self):
-        yield self
-        for child in self.children:
-            for item in child.walk():
-                yield item
+class Result(Result_):
+    raw = None
 
 
 def get_match(token, referents):
@@ -63,24 +38,3 @@ def convert_result(text, raw):
     result = Result(text, matches)
     result.raw = raw
     return result
-
-
-class Result(Record):
-    __attributes__ = ['text', 'matches']
-    raw = None
-
-    def __init__(self, text, matches):
-        self.text = text
-        self.matches = matches
-
-    def walk(self):
-        for match in self.matches:
-            for item in match.walk():
-                yield item
-
-    @property
-    def graph(self):
-        graph = Graph()
-        for match in self.walk():
-            graph.update(match.referent.graph)
-        return graph

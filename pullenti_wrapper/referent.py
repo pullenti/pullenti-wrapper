@@ -12,69 +12,14 @@ from pullenti.ner.phone.PhoneReferent import PhoneReferent as RawPhoneReferent
 from pullenti.ner.address.AddressReferent import AddressReferent as RawAddressReferent
 from pullenti.ner.address.StreetReferent import StreetReferent as RawStreetReferent
 
-from .utils import Record
-from .graph import (
-    Graph,
-    style,
-    BLUE,
-    SILVER
+from pullenti_client.referent import (
+    Slot,
+    Referent as Referent_
 )
 
 
-class Slot(Record):
-    __attributes__ = ['key', 'value']
-
-    def __init__(self, key, value):
-        self.key = key
-        self.value = value
-
-
-class Referent(Record):
-    __attributes__ = ['label', 'slots']
+class Referent(Referent_):
     raw = None
-
-    def __init__(self, label, slots=()):
-        self.label = label
-        self.slots = slots
-
-    def walk(self):
-        yield self
-        for slot in self.slots:
-            if isinstance(slot.value, Referent):
-                for item in slot.value.walk():
-                    yield item
-
-    @property
-    def graph(self):
-        graph = Graph()
-        for source in self.walk():
-            for key, target in source.slots:
-                graph.add_edge(
-                    source,
-                    target,
-                    style(label=key)
-                )
-                graph.add_node(
-                    source,
-                    style(
-                        label=source.label,
-                        fillcolor=BLUE
-                    )
-                )
-                if isinstance(target, Referent):
-                    color = BLUE
-                    label = target.label
-                else:
-                    color = SILVER
-                    label = target
-                graph.add_node(
-                    target,
-                    style(
-                        label=label,
-                        fillcolor=color
-                    )
-                )
-        return graph
 
 
 def slot_property(key):

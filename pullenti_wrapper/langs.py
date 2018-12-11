@@ -4,7 +4,6 @@ from pullenti.morph.Morphology import Morphology
 from pullenti.morph.Explanatory import Explanatory
 
 from .utils import (
-    Record,
     assert_one_of,
     assert_not_empty
 )
