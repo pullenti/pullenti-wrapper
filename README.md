@@ -15,7 +15,7 @@
 - Не очень привычный для Python интерфейс. Код получается трансляцией из C#.
 - Очень сложный код. Тяжело понять, что пошло не так есть, если в результате ошибка.
 
-Библиотека `pullenti-wrapper` нужна, чтобы исправить проблемы с интерфейсом. Концептуально ничего не меняется, API просто немного более лаконичное, у результатов разбора добавлен нормальный `__repr__`.
+Библиотека pullenti-wrapper нужна, чтобы исправить проблемы с интерфейсом. Концептуально ничего не меняется, API просто немного более лаконичное, у результатов разбора добавлен нормальный `__repr__`.
 
 
 ## Использование
@@ -63,7 +63,7 @@ display(result)
 
 ## Установка
 
-`pullenti-wrapper` поддерживает Python 3.4+ и PyPy 3.
+pullenti-wrapper поддерживает Python 3.4+ и PyPy 3.
 
 ```bash
 $ pip install pullenti-wrapper
@@ -71,17 +71,17 @@ $ pip install pullenti-wrapper
 
 ## Документация
 
-- Документация для обёртки — http://nbviewer.jupyter.org/github/natasha/pullenti-wrapper/blob/master/docs.ipynb
+- Документация для обёртки — http://nbviewer.jupyter.org/github/pullenti/pullenti-wrapper/blob/master/docs.ipynb
 - Документация для PullEnti — http://pullenti.ru/DownloadPage.aspx. На сайте PullEnti также есть демо-стенд http://pullenti.ru/DemoPage.aspx
 
 ## Лицензия
 
-Для `pullenti-wrapper` — MIT, для PullEnti — Free for non-commercial use, подробности на http://pullenti.ru/
+Для pullenti-wrapper — MIT, для PullEnti — Free for non-commercial use, подробности на http://pullenti.ru/
 
 ## Поддержка
 
 Для обёртки:
 - Чат — https://telegram.me/natural_language_processing
-- Тикеты — https://github.com/natasha/pullenti-wrapper/issues
+- Тикеты — https://github.com/pullenti/pullenti-wrapper/issues
 
 Для PullEnti — http://www.pullenti.ru/Default.aspx
