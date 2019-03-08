@@ -1,6 +1,6 @@
 # common
-pullenti==3.14
-pullenti_client
+pullenti==3.17
+pullenti_client==0.2.0
 
 # dev
 ipymarkup

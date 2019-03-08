@@ -113,7 +113,7 @@ INITIALIZED = set()
 
 
 def select_analyzers(selected):
-    for analyzer in ProcessorService.getAnalyzers():
+    for analyzer in ProcessorService.get_analyzers():
         if analyzer.name in selected:
             analyzer = analyzer.clone()
             if analyzer is not None:  # TODO why would it happen?
@@ -137,7 +137,7 @@ class Processor(object):
 
         self.raw = RawProcessor()
         for analyzer in select_analyzers(self.analyzers):
-            self.raw.addAnalyzer(analyzer)
+            self.raw.add_analyzer(analyzer)
 
     def __call__(self, text):
         text = preprocess(text)
