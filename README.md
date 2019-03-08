@@ -85,3 +85,27 @@ $ pip install pullenti-wrapper
 - Тикеты — https://github.com/pullenti/pullenti-wrapper/issues
 
 Для PullEnti — http://www.pullenti.ru/Default.aspx
+
+## Разработка
+
+Обновить версию pullenti, pullenti-client в requirements.txt.
+
+Тесты:
+
+```bash
+make test
+```
+
+Пакет:
+
+```bash
+make version
+git add ...
+git commit -m 'Up version'
+
+make tag
+git push
+git push --tags
+
+make clean wheel upload
+```

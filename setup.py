@@ -7,7 +7,7 @@ from setuptools import (
 
 setup(
     name='pullenti_wrapper',
-    version='0.3.0',
+    version='0.4.0',
     description='Simpler interface for PullEnti Python package',
     url='https://github.com/pullenti/pullenti-wrapper',
     author='Alexander Kukushkin',
