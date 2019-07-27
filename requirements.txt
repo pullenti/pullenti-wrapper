@@ -1,11 +1,2 @@
-# common
-pullenti==3.17
-pullenti_client==0.2.0
-
-# dev
-ipymarkup
-pytest==3.2.1
-pytest-pep8==1.0.6
-pytest-flakes==4.0.0
-nbval==0.9.1
-
+-r requirements/main.txt
+-r requirements/dev.txt

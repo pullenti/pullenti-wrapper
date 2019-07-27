@@ -5,6 +5,10 @@ from setuptools import (
 )
 
 
+with open('requirements/main.txt') as file:
+    requirements = file.read().splitlines()
+
+
 setup(
     name='pullenti_wrapper',
     version='0.4.0',
@@ -27,8 +31,5 @@ setup(
     ],
     keywords='natural language processing, named entity recognition',
     packages=find_packages(),
-    install_requires=[
-        'pullenti==3.14',
-        'pullenti_client'
-    ]
+    install_requires=requirements
 )

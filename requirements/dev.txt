@@ -1,0 +1,5 @@
+ipymarkup
+pytest==3.2.1
+pytest-pep8==1.0.6
+pytest-flakes==4.0.0
+nbval==0.9.1

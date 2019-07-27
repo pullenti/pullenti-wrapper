@@ -1,0 +1,2 @@
+pullenti==3.19
+pullenti_client==0.3.0
