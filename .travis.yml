@@ -7,5 +7,4 @@ addons:
     packages:
     - graphviz
 script:
-  - sed -i 's/kernelspec//' docs.ipynb
   - make test
