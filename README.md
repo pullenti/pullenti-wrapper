@@ -88,7 +88,7 @@ $ pip install pullenti-wrapper
 
 ## Разработка
 
-Обновить версию pullenti, pullenti-client в requirements.txt.
+Обновить версию pullenti, pullenti-client в requirements/main.txt.
 
 Тесты:
 
