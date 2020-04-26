@@ -15,7 +15,11 @@ class Result(Result_):
 
 
 def get_match(token, referents):
-    referent = referents[id(token.referent)]
+    referent = referents.get(id(token.referent))
+    if not referent:
+        # Rare MAYBE TODO
+        return
+
     start = token.begin_token
     stop = token.end_token
     span = Span(start.begin_char, stop.end_char + 1)
@@ -26,7 +30,9 @@ def get_match(token, referents):
 def get_matches(token, stop=None, referents=None):
     while token:
         if isinstance(token, ReferentToken):
-            yield get_match(token, referents)
+            match = get_match(token, referents)
+            if match:
+                yield match
         if token == stop:
             break
         token = token.next0_
