@@ -11,7 +11,7 @@ with open('requirements/main.txt') as file:
 
 setup(
     name='pullenti_wrapper',
-    version='0.8.0',
+    version='0.9.0',
     description='Simpler interface for PullEnti Python package',
     url='https://github.com/pullenti/pullenti-wrapper',
     author='Alexander Kukushkin',
