@@ -1,7 +1,7 @@
 
 from pullenti.morph.MorphLang import MorphLang
 from pullenti.morph.Morphology import Morphology
-from pullenti.morph.Explanatory import Explanatory
+from pullenti.semantic.utils.Explanatory import Explanatory
 
 from .utils import (
     assert_one_of,
