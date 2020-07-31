@@ -1,3 +1,5 @@
+> # Репозиторий не обновляется, используйте <a href="https://github.com/pullenti/PullentiServer">PullentiServer</a> + <a href="https://github.com/pullenti/pullenti-client">pullenti-client</a>
+
 # pullenti-wrapper [![Build Status](https://travis-ci.org/pullenti/pullenti-wrapper.svg?branch=master)](https://travis-ci.org/pullenti/pullenti-wrapper)
 
 [PullEnti](http://pullenti.ru/) — библиотека на C# для NER на русском языке. В 2016 году заняла первое место на [соревновании factRuEval-2016](https://github.com/dialogue-evaluation/factRuEval-2016). В 2018 автор [портировал код на Java и Python](https://habr.com/post/354942/).
