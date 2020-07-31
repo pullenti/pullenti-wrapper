@@ -1,2 +1,2 @@
-pullenti==3.21
-pullenti_client==0.5.0
+pullenti==3.23
+pullenti_client==0.6.0
